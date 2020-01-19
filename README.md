@@ -1,5 +1,5 @@
 # HKUIImageView
-#### HK UIImageView Enchancements
+#### HK UIImageView Enhancements
 
 ## IMPORTANT!! ##
 
