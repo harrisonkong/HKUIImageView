@@ -19,7 +19,7 @@
 <img src="./docs/cloudline.png" alt="---line---">
 
 ## WHAT IS IT? ##
-`HKUIImageView` enhances the functionality of UIView by providing these additional features:
+`HKUIImageView` enhances the functionality of UIImageView by providing these additional features:
 
 ### Dynamic Corner Radius 
 Allows you to dynamically calculate the corner radius base on one of the followings:
