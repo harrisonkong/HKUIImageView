@@ -115,13 +115,13 @@ UIView+LengthCalculationBasis.swift
 
 ### Interface Builder ###
 
-1. Drop a UIView in your view controller then change the class in the *Identity Inspector* pane to HKUIView like this:
+1. Drop a UIImageView in your view controller then change the class in the *Identity Inspector* pane to HKUIImageView like this:
 
 <img src="./docs/Identity-Inspector.png" alt="identity inspector pane screenshot">
 
 Note that you might need to wait for the design time code to compile after setting the class.
 
-2. There will be 10 inspectable variables at the *Attribute Inspector* pane:
+2. There will be 12 inspectable variables at the *Attribute Inspector* pane:
 
 <img src="./docs/Attribute-Inspector.png" alt="attribute inspector pane screenshot">
 
@@ -140,9 +140,11 @@ Note that you might need to wait for the design time code to compile after setti
   - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
   - The 5th, 6th and 7th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
+
+  - The 8th, 9th and 10th attributes are **Hilite Bd Color**, **Hilite Bd Alpha**, and **Hilite Bd Width**. Which are the highlighted border color, hightlighted border alpha, and hightlighted border width, respectively.
   
-In this example the result is shown in the first figure on this page. A red border 
-  
+  - The 11th and 12th attributes are **Hilite Bkg** and **Hilite Bkg Alpha**. Which are the hightlighted background color and hightlighted alpha, respectively.
+    
 3. Of course, the immediate appearance of the label might differ from the one at runtime if the label size changes.
 
 ### Programmatically ###
@@ -160,6 +162,13 @@ myImageView.cornerRadiusFactor = 24.0
 myImageView.borderColor = UIColor.red
 myImageView.borderAlpha = 1.0
 myImageView.borderWidth = 5.0
+
+myImageView.hiliteBdColor = UIColor.yellow
+myImageView.hiliteBdAlpha = 1.0
+myImageView.hiliteBdWidth = 5.0
+
+myImageView.hiliteBkg = UIColor.blue
+myImageView.hiliteBkgAlpha = 0.5
 ```
 
 Note that the second attribute `roundingBasis` is an enumeration type that is declared in `UIView+LengthCalculationBasis.swift` as follow:
